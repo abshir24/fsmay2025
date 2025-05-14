@@ -1,0 +1,20 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#blue-block{
+    background-color:blue;
+    width:800px;
+    height:800px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+#red-block{
+    background-color:red;
+    width:150px;
+    height:150px;
+}

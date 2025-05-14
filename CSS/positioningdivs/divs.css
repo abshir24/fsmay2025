@@ -1,0 +1,18 @@
+.blue-flex-container{
+    border:solid black 2px;
+    display:flex;
+    justify-content: center;
+}
+
+.green-flex-container{
+    border:solid black 2px;
+    display:flex;
+    justify-content: right;
+}
+
+.box{
+    height:100px;
+    width:100px;
+    margin-top:20px;
+    margin-bottom:20px;
+}

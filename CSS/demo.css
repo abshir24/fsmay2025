@@ -1,0 +1,21 @@
+h1,p,a,button{
+    outline:dotted red 2px;
+    display:block
+}
+
+
+.flex-container{
+    height:1000px;
+    background-color:grey;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.flex-box{
+    width:100px;
+    height:100px;
+    background-color: orange;
+    margin-right:10px;
+}
+
