@@ -1,0 +1,45 @@
+body{
+    margin-top:0px;
+}
+
+#header{
+    height:20%;
+    background-color: #2e54ff;
+    color:white;
+    font-size:25px;
+    text-align:center;
+    padding-top:15px;
+    font-family:arial
+}
+
+#container{
+    padding:75px;
+}
+
+#body{
+    border:solid lightgray 2px;
+    height:30%;
+    padding:10px;
+}
+
+.task-container{
+    border:solid lightgray 2px;
+    display:flex; 
+    padding:5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.task-box{
+    width:23%;
+    font-size:23px;
+    font-family:arial
+}
+
+#completion{
+    background-color:#40bd4c;
+    color:white;
+    font-size:20px;
+    font-family:arial;
+    height:25px;
+}
