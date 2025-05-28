@@ -1,0 +1,1 @@
+console.log("This is the print statement from the external file")
