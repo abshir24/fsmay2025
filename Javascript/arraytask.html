@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Javascript Task</title>
+
+        <script type="text/javascript">
+            let contacts = ["Jon Snow", "Arya Stark", "Tyrion Lannister"];
+
+            function addContact(name){
+                contacts.push(name)
+
+                console.log("Created contact successfully")
+            }
+
+            addContact("Danarys")
+
+            function printContacts(){
+                console.log(contacts)
+
+                for(let i=0 ; i<contacts.length;i++){
+                    console.log(contacts[i])
+                }
+            }
+
+            printContacts()
+        </script>
+    </head>
+
+    <body>
