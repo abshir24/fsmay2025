@@ -2,7 +2,7 @@
     <head>
         <title>Javascript Demo</title>
         <style>
-            #box{
+            #div{
                 width:400px;
                 height:400px;
                 background-color: blue;
@@ -13,18 +13,18 @@
 
 
     <body>
-        <div id="box"></div>
+        <div id="div"></div>
 
         <button id="btn">Print Message</button>
 
         
         <script type="text/javascript">
             let button = document.getElementById("btn")
+            let div = document.getElementById("div")
 
             button.addEventListener("click", function(){
-                console.log("The button was clicked on!")
+                div.style.backgroundColor = "Green"
             })
-  
         </script>
     </body>
 </html>
