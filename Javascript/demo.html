@@ -1,30 +1,42 @@
 <html>
     <head>
         <title>Javascript Demo</title>
-        <style>
-            #box{
-                width:400px;
-                height:400px;
-                background-color: blue;
-            }
-        </style>
         
     </head>
 
 
     <body>
-        <div id="box"></div>
+        <form id="form">
+            <label>First Name</label><br>
+            <input type="text" name="fname" id="fname-input"><br>
 
-        <button id="btn">Print Message</button>
+            <label>Last Name</label><br>
+            <input type="text" name="lname" id="lname-input"><br>
+
+            <input type="submit" value="Submit!">
+        </form>
+
+
+        <div id="output"></div>
+
 
         
         <script type="text/javascript">
-            let button = document.getElementById("btn")
+            let form = document.getElementById("form")
+            let firstname = document.getElementById("fname-input")
+            let lastname = document.getElementById("lname-input")
+            let output = document.getElementById("output")
 
-            button.addEventListener("click", function(){
-                console.log("The button was clicked on!")
+            form.addEventListener("submit", function(){
+                event.preventDefault(); 
+
+                let fname = firstname.value
+                let lname = lastname.value
+
+
+                output.innerHTML = "<h1>First name: " + fname + " Last name: " + lname + "</h1>"
             })
-  
+
         </script>
     </body>
 </html>
