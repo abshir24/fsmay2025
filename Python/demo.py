@@ -1,9 +1,12 @@
-name = "Zues"
+string = "5"
+number = int(string)
 
-name2 = "Hera"
+number = int( input("Guess a number?") )
 
-print( f"The full name above is {name} { name2 }")
+print( 1 == number )
 
+def test():
+    
 
 
 
