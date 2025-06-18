@@ -1,20 +1,15 @@
 class Car:
-    weight = 2,875
-    make = "Toyota"
-    model = "Corolla"
-    price =  19995
-    year = 2025
-    top_speed = 240
+
+    def __init__(self, make, model, year, price):
+       self.make = make
+       self.model = model
+       self.year = year 
+       self.price = price
+
+
 
     def printInfo(self):
-        print(f"Make: { self.make }, Model: {self.model}, Price: {self.price}, Year: {self.year}, Weight:{self.weight}")
+        print(f"Make: { self.make }, Model: {self.model}, Price: {self.price}, Year: {self.year}")
     
 
-
-toyota1 = Car()
-
-toyota1.printInfo()
-
-toyota2 = Car()
-
-toyota2.printInfo()
+toyota1 = Car("Toyota","Corolla",2025,24000)
