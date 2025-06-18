@@ -1,15 +1,19 @@
-class Car:
+class Vehicle:
+    def __init__(self, weight, base_speed):
+        self.weight = weight
+        self.base_speed = base_speed
 
-    def __init__(self, make, model, year, price):
+    def printVehicleStats(self):
+        print("Weight: " , self.weight, "Base Speed: ", self.base_speed)
+
+
+class Car(Vehicle):
+   def __init__(self,weight,base_speed,make,model):
+       super().__init__(weight,base_speed)
        self.make = make
        self.model = model
-       self.year = year 
-       self.price = price
+       
 
+newcar = Car(3000,150,"","")
 
-
-    def printInfo(self):
-        print(f"Make: { self.make }, Model: {self.model}, Price: {self.price}, Year: {self.year}")
-    
-
-toyota1 = Car("Toyota","Corolla",2025,24000)
+print( newcar.printVehicleStats() )
