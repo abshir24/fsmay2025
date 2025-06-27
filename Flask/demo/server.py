@@ -6,10 +6,9 @@ app = Flask(__name__)
 def test():
     return render_template("index.html")
 
-@app.route('/home')
-def home():
-    return "<h1> Hello World Flask </h1>"
+@app.route('/home/<id>')
+def home(id):
+    return render_template("dynamic.html", id = id)
 
 if __name__ == "__main__":
     app.run(debug=True)   
-
