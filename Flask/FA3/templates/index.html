@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Demo</title>
+    </head>
+    <body>
+        <h1>Part 1:</h1>
+        <h3>Name: {{ name }}</h3>
+        <h3> Favorite Food: {{ food }}</h3>
+        <h3>Vacation: {{ vacation }}</h3>
+
+        <h1>Part 2</h1>
+
+        {% for i in range(1,11) %}
+            {% if i % 2 == 0 %}
+                <h3>Even: {{i}}</h3>
+            {% else %}
+                <h3>Odd: {{i}}</h3>
+            {% endif %}
+        {% endfor %}
+    </body>
+</html>
