@@ -19,7 +19,8 @@ class User(db.Model):
 
 @app.route('/')
 def index():
-   return render_template("index.html")
+   all_users = User.query.all()
+   return render_template("index.html", users = all_users)
 
 
 @app.route('/adduser')
@@ -41,12 +42,43 @@ def retrieveusers():
 
    return "Test"
 
-@app.route('/retrieveuser/<int:user_id>')
-def retrieveuser(user_id):
+@app.route('/getuser/<int:user_id>')
+def getuser(user_id):
    user = User.query.get(user_id)
 
 
    return f"Name: {user.name} Email:{user.email}, Password: {user.password}"
+
+@app.route('/update/<int:id>')
+def update_user(id):
+   user = User.query.get(id)
+
+   user.name = "Updated Name"
+   user.email = "update@update.com"
+
+   try:
+      db.session.commit()
+   except Exception as e:
+      db.session.rollback()
+      print("Error:", e)
+
+
+   return redirect('/')
+
+@app.route('/delete/<int:id>')
+def delete_user(id):
+   user = User.query.get(id)
+
+   db.session.delete(user)
+
+   try:
+      db.session.commit()
+   except Exception as e:
+      db.session.rollback()
+      print("Error:", e)
+
+
+   return redirect('/')
 
 if __name__ == "__main__":
    with app.app_context():

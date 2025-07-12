@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <style>
+            table,th,th,tr,td{
+                border:solid black 2px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <table>
+            <thead>
+                <th>id</th>
+                <th>name</th>
+                <th>email</th>
+                <th>date created</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{user.date_created}}</td>
+                <td><a href="/update/{{user.id}}">Update</a></td>
+                <td><a href="/delete/{{user.id}}">Delete</a></td>
+            </tr>
+        {% endfor %}
+        </table>
+    </body>
+</html>
