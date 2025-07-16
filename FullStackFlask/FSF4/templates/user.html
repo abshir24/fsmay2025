@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>User</title>
+    </head>
+
+    <body>
+        <h2>User {{ user.id }} </h2>
+        <h2>Full Name: {{ user.name }} </h2>
+        <h2>Email: {{ user.email }} </h2>
+        <h2>Created: {{ user.created_at }} </h2>
+
+        <a href="/edituserform/{{user.id}}">Edit</a> | <a href="/delete/{{user.id}}">delete</a>
+    </body>
+</html>
