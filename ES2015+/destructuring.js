@@ -8,7 +8,7 @@ tag: "child-friendly"
 };
 
 var destructureChocolateCake = function() {
-    let {isVegan, calories} = chocolateCake
+    let { isVegan, calories } = chocolateCake
 
     console.log("Is Vegan? ", isVegan, "Calories ", calories)
 };
