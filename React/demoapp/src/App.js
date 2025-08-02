@@ -1,12 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import ParentComponent from './components/ReactPropsAssignment/ParentComponent';
+import EventHandler from './components/ReactAssignment8/EventHandler';
 
 function App() {
+   
   return (
-    <div>
-      <ParentComponent />
-    </div>
+    <EventHandler />
   );
 }
 
