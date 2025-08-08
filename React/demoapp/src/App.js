@@ -1,13 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
-import EventHandler from './components/ReactAssignment8/EventHandler';
-import ListRenderer from './components/ReactAssignment9/ListRenderer';
+import { useState } from 'react'
+import Counter from './components/ReactAssignment12/Counter';
 
 function App() {
-  let isVisible = true
 
   return (
-      <h1>{ isVisible === true ? "Component is visible": "Component is not visible" }</h1>
+    <div>
+      <Counter />
+    </div>  
   );
 }
 

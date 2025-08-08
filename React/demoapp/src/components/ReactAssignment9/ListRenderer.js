@@ -1,11 +1,13 @@
+import './ListRenderer.css'
+
 function ListRenderer() {
-   const foods = ["Pasta", "Pizza", "Tikka Masala"]
+  const foods = ["Pasta", "Pizza", "Tikka Masala"]
 
   return (
     <ul>
       {
         foods.map((food)=>(
-            <li>{food}</li>
+            <li className="test">{food}</li>
         ))
       }
     </ul>
