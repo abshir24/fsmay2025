@@ -6,15 +6,39 @@ const Book = require('./Book')
 
 app.use( bodyParser.json() )
 
-// app.get("/books", (request,response)=>{
-//     response.send(books)
-// })
+app.get("/books", async (request,response)=>{
+    let books = await Book.find() //[{Book},{Book}]
 
-// app.get("/books/:id", (request,response)=>{
-//     let book = books.find( (book) => book.id == request.params.id ) //1
+    response.send(books)
+})
 
-//     response.send(book)
-// })
+app.get("/books/:id", (request,response)=>{
+    Book.findById(request.params.id)
+        .then((book) =>{
+            response.send(book)
+        })
+        .catch((err) => response.send(err))
+})
+
+app.put("/books/:id",(request,response)=>{
+    Book.findByIdAndUpdate(request.params.id, request.body, { new:true })
+        .then((book)=>{
+            console.log("The book was updated")
+
+            response.send(book)
+        })
+        .catch((err) => response.send(err))
+})
+
+app.delete("/books/:id",(request,response)=>{
+    Book.findByIdAndDelete(request.params.id)
+        .then((book)=>{
+            console.log("Book was deleted")
+
+            response.send("The book was deleted.")
+        })
+        .catch((err) => response.send(err))
+})
 
 app.post("/books", (request,response)=>{
     let newBook = new Book( request.body )
