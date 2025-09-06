@@ -8,7 +8,7 @@ app.use( bodyParser.json() )
 
 app.use('/', router) 
 
-let connectionString = ""
+let connectionString = 
 
 mongoose.connect(connectionString)
 .then(()=>{

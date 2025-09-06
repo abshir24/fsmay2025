@@ -1,4 +1,4 @@
-const Playlist = require('./Playlist')
+const Playlist = require('../Playlist')
 
 const getAllPlaylists = async (request,response) => {
     let playlists = await Playlist.find() //[{playlistS},{playlistS}]
