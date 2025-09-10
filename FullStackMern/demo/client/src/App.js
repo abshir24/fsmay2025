@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import { getPlaylists, addPlaylist } from './api/api'
+import { getPlaylists, addPlaylist, deletePlaylist } from './api/api'
 import{ useState, useEffect } from 'react'
+
 
 function App() {
   const [playlists, setPlaylists] = useState([])
@@ -30,6 +31,11 @@ function App() {
     console.log("Playlist added, ", response.data)
   }
 
+  const deleteSelectedPlaylist = async (id)=>{
+    const response = await deletePlaylist(id)
+
+    console.log("Deleted playlist, ", response.data)
+  }
 
   return (
     <div className="App">
@@ -46,6 +52,7 @@ function App() {
                 <th>Title</th>
                 <th>Description</th>
                 <th>Creator</th>
+                <th>Action</th>
             </tr>
 
             {
@@ -54,6 +61,9 @@ function App() {
                         <td>{playlist.title}</td>
                         <td>{playlist.description}</td>
                         <td>{playlist.creator}</td>
+                        <td>
+                          <button onClick={()=>{deleteSelectedPlaylist(playlist._id)}}>Delete</button>
+                        </td>
                     </tr>
                 ))
             }

@@ -15,6 +15,7 @@ const getPlaylistById = (request,response)=>{
 }
 
 const addPlaylist = (request,response)=>{
+    console.log("Request Body", request.body)
     const newplaylist = new Playlist( request.body )
 
     newplaylist.save()
