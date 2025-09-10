@@ -5,3 +5,5 @@ const api = axios.create({
 })
 
 export const getPlaylists = () => api.get('/playlists')
+
+export const addPlaylist = (playlist) => api.post('/playlists',playlist)
